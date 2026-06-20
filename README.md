@@ -12,6 +12,7 @@ Inspired by platforms like **Outlier**, **Toloka**, and internal LLM alignment p
 - **Dataset Export**: Output results in standard JSONL format, ready for RLHF training pipelines. Supports both raw evaluation records and pairwise preference datasets.
 - **Trace Logging**: Every evaluation is logged with full metadata (prompt, response, scores, tags, timestamp) for auditability and reproducibility.
 - **Interactive CLI**: Clean, guided terminal interface with real-time statistics and export options.
+- **This project is designed as an educational simulation of human feedback annotation pipelines used in modern LLM alignment workflows.
 
 ## Project Structure
 
@@ -53,6 +54,19 @@ source venv/bin/activate   # Linux/Mac
 # Ready to run! No pip install needed.
 ```
 
+## Real Evaluation Workflow (Simulated RLHF Loop)
+
+This system simulates a simplified version of real-world LLM evaluation workflows used in RLHF pipelines.
+
+Typical flow:
+
+1. A user prompt is submitted
+2. Two models generate responses (baseline vs reasoning-optimized)
+3. Evaluator compares outputs side-by-side
+4. Structured scoring is applied across multiple dimensions
+5. Failure modes are identified and tagged
+6. Final records are exported into JSONL format for downstream training or analysis
+   
 ## Usage
 
 ### Start the Evaluation Terminal
